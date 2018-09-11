@@ -3,6 +3,7 @@ import apiCall from '../apiCall';
 import Character from '../Character/Character';
 import Film from '../Film/Film';
 import DataCleaner from '../dataCleaner';
+import xwing from '../x-wing.gif'
 import { characters } from '../characters.json';
 import './App.css';
 
@@ -11,7 +12,8 @@ class App extends Component {
     super();
     this.state = {
       films: [],
-      error: ''
+      error: '',
+      loading: false
     };
     this.dataCleaner = new DataCleaner(apiCall)
   }
@@ -20,15 +22,16 @@ class App extends Component {
     const { id } = event.target;
     const clicked = characters.find(({ name }) => name === id);
     this.reset();
+    this.setState({loading: true})
     this.setFilmData(clicked.url)
   }
 
   setFilmData = async (url) => {
     try {
       const films = await this.dataCleaner.getFilmInfo(url);
-      this.setState({films});
+      this.setState({films, loading: false});
     } catch (error) {
-      this.setState({error})
+      this.setState({error, loading: false})
     }
   }
 
@@ -61,6 +64,13 @@ class App extends Component {
         <nav>
           {this.renderCharBtns()}
         </nav>
+        {
+          this.state.loading &&
+          <div className='loading'>
+            <img src={xwing} />
+            <h2>Loading...</h2>
+          </div>  
+        }
         <main>
           {this.renderResults()}
         </main>
