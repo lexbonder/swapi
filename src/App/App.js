@@ -67,7 +67,7 @@ class App extends Component {
         {
           this.state.loading &&
           <div className='loading'>
-            <img src={xwing} />
+            <img src={xwing} alt="x-wing flying loading gif"/>
             <h2>Loading...</h2>
           </div>  
         }
