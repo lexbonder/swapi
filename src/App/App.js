@@ -8,20 +8,29 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      films: []
+      films: [],
+      error: ''
     };
-
   }
   
   handleClick = (event) => {
+    this.reset();
     const { id } = event.target;
     const clicked = characters.find(char => char.name === id);
     this.getFilmUrls(clicked.url);
   }
 
+  reset = () => {
+    this.setState({films: [], error: ''});
+  }
+
   getFilmUrls = async (url) => {
-    const { films } = await apiCall(url);
-    this.setState({ films });
+    try {
+      const { films } = await apiCall(url);
+      this.setState({ films });
+    } catch (error) {
+      this.setState({ error });
+    }
   }
 
   renderCharBtns = () => {
@@ -36,9 +45,7 @@ class App extends Component {
         <nav>
           {this.renderCharBtns()}
         </nav>
-        <main>
-          
-        </main>
+        
       </div>
     );
   }
