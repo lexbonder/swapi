@@ -9,6 +9,8 @@ script:
   - npm run build
 deploy:
   provider: surge
-  domain: lexbonder-swapi-challenge.surge.sh  
+  project: ./build/
+  domain: lexbonder-swapi-challenge.surge.sh
+  skip-cleanup: true
 notifications:
   email: false
