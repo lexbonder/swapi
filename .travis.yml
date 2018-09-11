@@ -6,5 +6,9 @@ cache:
   - node_modules
 script:
   - npm test
+  - npm run build
+deploy:
+  provider: surge
+  domain: lexbonder-swapi-challenge.surge.sh  
 notifications:
   email: false
