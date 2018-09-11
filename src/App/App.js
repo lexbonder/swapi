@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
+import Character from '../Character/Character';
 import {characters} from '../characters.json';
+import './App.css';
 
 class App extends Component {
   render() {
