@@ -21,18 +21,41 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        "Empire Strikes Back",
-        " - ",
-        "Saturday, May 17th 1980",
+        <h3>
+          Empire Strikes Back
+</h3>,
+        <h3>
+          Saturday, May 17th 1980
+</h3>,
       ],
+      "className": "Film",
     },
     "ref": null,
     "rendered": Array [
-      "Empire Strikes Back",
-      " - ",
-      "Saturday, May 17th 1980",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Empire Strikes Back",
+        },
+        "ref": null,
+        "rendered": "Empire Strikes Back",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Saturday, May 17th 1980",
+        },
+        "ref": null,
+        "rendered": "Saturday, May 17th 1980",
+        "type": "h3",
+      },
     ],
-    "type": "li",
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -41,18 +64,41 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          "Empire Strikes Back",
-          " - ",
-          "Saturday, May 17th 1980",
+          <h3>
+            Empire Strikes Back
+</h3>,
+          <h3>
+            Saturday, May 17th 1980
+</h3>,
         ],
+        "className": "Film",
       },
       "ref": null,
       "rendered": Array [
-        "Empire Strikes Back",
-        " - ",
-        "Saturday, May 17th 1980",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Empire Strikes Back",
+          },
+          "ref": null,
+          "rendered": "Empire Strikes Back",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Saturday, May 17th 1980",
+          },
+          "ref": null,
+          "rendered": "Saturday, May 17th 1980",
+          "type": "h3",
+        },
       ],
-      "type": "li",
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {

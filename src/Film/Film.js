@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Film.css';
 
 const Film = ({title, date}) => {
   return (
-    <li>{title} - {date}</li>
+    <div className='Film'>
+      <h3>{title}</h3>
+      <h3>{date}</h3>
+    </div>
   );
 };
 

@@ -13,13 +13,60 @@ h1 {
   margin: auto;
   text-align: center;
   border: 3px solid red;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 10px
 }
 
-ul {
-  width: 50%;
+h2 {
+  text-align: center;
+  text-decoration: underline;
+  color: yellow;
+}
+
+section {
+  width: 70%;
+  margin: 0 auto 20px;
+
+}
+
+section div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid white;
+}
+
+img {
+  display: block;
+  width: 55%;
   margin: auto;
-  padding: 20px;
-  list-style: none;
+}
+
+#loading {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1010px) {
+  nav {
+    flex-wrap: wrap;
+    max-width: 380px;
+  }
+
+  section {
+    width: fit-content;
+  }
+
+  section div {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  body {
+    background-size: auto;
+  }
+
+  nav {
+    justify-content: center;
+    max-width: 320px;
+  }
 }

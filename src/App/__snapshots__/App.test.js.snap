@@ -28,12 +28,27 @@ exports[`App renderResults should match the snapshot when there is an error in s
 `;
 
 exports[`App renderResults should match the snapshot where there are results to show 1`] = `
-<ul>
-  <Film
-    date="Saturday, May 17th 1980"
-    title="Empire Strikes Back"
-  />
-</ul>
+<div>
+  <h2>
+    Movies Featuring 
+    
+    :
+  </h2>
+  <section>
+    <div>
+      <h3>
+        Title
+      </h3>
+      <h3>
+        Release Date
+      </h3>
+    </div>
+    <Film
+      date="Saturday, May 17th 1980"
+      title="Empire Strikes Back"
+    />
+  </section>
+</div>
 `;
 
 exports[`App should match the snapshot 1`] = `
@@ -73,11 +88,7 @@ ShallowWrapper {
           />
 </nav>,
         false,
-        <main>
-          <ul>
-                    
-          </ul>
-</main>,
+        <main />,
       ],
       "className": "App",
     },
@@ -166,22 +177,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <ul>
-            
-</ul>,
+          "children": undefined,
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [],
-          },
-          "ref": null,
-          "rendered": Array [],
-          "type": "ul",
-        },
+        "rendered": null,
         "type": "main",
       },
     ],
@@ -213,11 +212,7 @@ ShallowWrapper {
             />
 </nav>,
           false,
-          <main>
-            <ul>
-                        
-            </ul>
-</main>,
+          <main />,
         ],
         "className": "App",
       },
@@ -306,22 +301,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <ul>
-              
-</ul>,
+            "children": undefined,
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [],
-            },
-            "ref": null,
-            "rendered": Array [],
-            "type": "ul",
-          },
+          "rendered": null,
           "type": "main",
         },
       ],

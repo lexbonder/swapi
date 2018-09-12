@@ -25,7 +25,8 @@ describe("App", () => {
     const expectedState = {
       films: [],
       error: "",
-      loading: false
+      loading: false,
+      selected: ''
     };
     expect(wrapper.state()).toEqual(expectedState);
   });

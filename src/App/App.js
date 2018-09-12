@@ -13,7 +13,8 @@ class App extends Component {
     this.state = {
       films: [],
       error: '',
-      loading: false
+      loading: false,
+      selected: ''
     };
     this.dataCleaner = new DataCleaner(apiCall)
   }
@@ -22,7 +23,7 @@ class App extends Component {
     const { id } = event.target;
     const clicked = characters.find(({ name }) => name === id);
     this.reset();
-    this.setState({loading: true})
+    this.setState({loading: true, selected: id})
     this.setFilmData(clicked.url)
   }
 
@@ -49,11 +50,18 @@ class App extends Component {
     const { error, films } = this.state;
     if (error) {
       return <h1>{error}</h1>;
-    } else {
+    } else if (films.length) {
       return (
-        <ul>
-          {films.map(film => <Film key={film.title} { ...film } />)}
-        </ul>
+        <div>
+          <h2>Movies Featuring {this.state.selected}:</h2>
+          <section>
+            <div>
+              <h3>Title</h3>
+              <h3>Release Date</h3>
+            </div>
+            {films.map(film => <Film key={film.title} { ...film } />)}
+          </section>
+        </div>
       )
     }
   }
@@ -68,7 +76,7 @@ class App extends Component {
           this.state.loading &&
           <div className='loading'>
             <img src={xwing} alt="x-wing flying loading gif"/>
-            <h2>Loading...</h2>
+            <h2 id='loading'>Loading...</h2>
           </div>  
         }
         <main>

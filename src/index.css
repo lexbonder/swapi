@@ -3,6 +3,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  color: white;
 
-  background-color: blue;
+  background-image: url('./space.jpg');
+  background-size: cover;
 }
